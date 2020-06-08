@@ -19,14 +19,15 @@
 # Inherit from the common product configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, $(TOPDIR)vendor/lineage/config/common_full_phone.mk)
+# Inherit some common POTATO stuff
+$(call inherit-product, $(TOPDIR)vendor/potato/config/common_full_phone.mk)
 
 # Screen Resolution for the Bootanimation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
-PRODUCT_NAME := lineage_angler
+PRODUCT_NAME := potato_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P
@@ -41,7 +42,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/angler/angler:8.1.0/OPM3.171019.014/4503998:user/release-keys
 
 BUILD_FINGERPRINT := google/angler/angler:8.1.0/OPM3.171019.014/4503998:user/release-keys
-
-# Lineage Updater
-PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/PixelBoot/Lineage-OTA/lineage-17.1/angler.json

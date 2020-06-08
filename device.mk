@@ -357,10 +357,6 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 #USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -401,7 +397,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Write Manufacturer & Model information in created media files.
 # IMPORTANT: ONLY SET THIS PROPERTY TO TRUE FOR PUBLIC DEVICES
-ifneq ($(filter aosp_angler% lineage_angler%, $(TARGET_PRODUCT)),)
+ifneq ($(filter aosp_angler% potato_angler%, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
 else
