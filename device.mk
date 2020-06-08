@@ -351,6 +351,11 @@ PRODUCT_PACKAGES += \
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service.angler
+	
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
 
 # Trust HAL
 PRODUCT_PACKAGES += \
